@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #ffffff;
+  }
+  
+  .header .left {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .left i {
+    margin-right: 10px; /* Add space between the icon and the text */
+    cursor: pointer;
+  }
+  
+  .header .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .right span {
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .right .user i,
+  .header .right .help i {
+    margin-right: 5px;
+    font-size: 30px; /* Adjust the size of the icons */
+    color: #052844;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover state */
+  .header .right .help:hover i,
+  .header .right .user:hover i {
+    color: #007bff; /* Highlight color on hover */
+  }
+  
+  /* Active state */
+  .header .right .help:active i,
+  .header .right .user:active i {
+    color: #0056b3; /* Darker highlight color on active */
+  }
+  
