@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #4c87af;
+    --secondary-color: #8bc34a;
+    --background-color: #ffffff;
+    --header-background: #333;
+    --header-color: #ffffff00;
+    --menubar-background: #4c87af;
+    --menubar-color: #ffffff;
+    --menubar-hover-background: #ffffff;
+    --menubar-hover-color: #ffffff;
+    --main-background: #ffffff;
+    --main-color: #333;
+    --border-color: #b2b1b1;
+    --table-header-background: #ffffff;
+    --table-row-background: #fff;
+    --footer-background: #ffffff;
+    --footer-border-color: #ffffff;
+    --button-hover-color: #3fd851;
+    --header-hover-color: #f72c2c;
+}
+
+/* Basic styling */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: var(--main-color);
+} */
+
+/* Container for sidebar and main content */
+/* .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+} */
+/* .card{
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0px;
+    align-items: 20px;
+} */
+
+/* .main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    transition: margin-left 0.3s ease;
+} */
+/* Main content styling */
+/* .content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.s ease;
+    box-sizing: border-box;
+} */
+
+/* When sidebar is visible */
+/* .sidebar.visible + .content {
+    margin-left: 250px; 
+    width: calc(100% - 200px);
+} */
+
+/* When sidebar is hidden */
+/* .sidebar.hidden + .content {
+    margin-left: 0;
+    width: 200%;
+} */
+
+/* Button to toggle the sidebar */
+/* .menu-toggle-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.95rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    z-index: 1001;
+}
+
+.menu-toggle-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+} */
+
+/* Table section styling */
+/* .table-section {
+    width: 100%;
+    overflow-x: auto;
+    height: auto;
+} */
+
+.table-responsive{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: var(--table-row-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+/* Table headers and cells */
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #f5f5f5;
+    /* background-color: #f0f0f0;
+    font-weight: bold;
+    color: #333; */
+   /* text-transform: lowercase;*/
+    /* letter-spacing: 0.09rem;
+    font-size: 16px; */
+}
+
+td {
+    vertical-align: middle;
+}
+
+td img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Button inside table cells */
+td button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+td button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Larger select element */
+td select {
+    /* font-size: 1rem; */
+    /* padding: 0.85rem 1rem; */
+    /* border-radius: 4px;
+    border: 1px solid var(--border-color); */
+    padding: 5px;
+    width: 100%;
+}
+
+/* Footer Styles */
+/* footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-background);
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--footer-border-color);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 150px;
+    transition: border-color 0.3s;
+}
+
+footer input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+} */
