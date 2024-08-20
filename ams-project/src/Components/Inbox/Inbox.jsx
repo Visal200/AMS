@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Inbox.css'; // Assuming you want to add some custom styles
+import './inbox.css'; // Assuming you want to add some custom styles
 
 const Inbox = () => {
     // Initial data structure for the table rows
@@ -70,7 +70,7 @@ const Inbox = () => {
     };
 
     return (
-        <div className="card">
+        <div>
             <table className="inbox-table">
                 <thead>
                     <tr>
@@ -135,7 +135,7 @@ const Inbox = () => {
                     onChange={handleReasonChange} 
                     className="reason-input"
                 />
-                <button onClick={handleAddClick} className="add-b1">Add Reason</button>
+                <button onClick={handleAddClick} className="add-button">Add Reason</button>
             </div>
         </div>
     );

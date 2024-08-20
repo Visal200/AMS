@@ -1,0 +1,263 @@
+/* Root Variables */
+:root {
+    --primary-color: #4c87af;
+    --secondary-color: #8bc34a;
+    --background-color: #ffffff;
+    --header-background: #333;
+    --header-color: #ffffff00;
+    --menubar-background: #4c87af;
+    --menubar-color: #ffffff;
+    --menubar-hover-background: #ffffff;
+    --menubar-hover-color: #ffffff;
+    --main-background: #ffffff;
+    --main-color: #333;
+    --border-color: #b2b1b1;
+    --table-header-background: #ffffff;
+    --table-row-background: #fff;
+    --footer-background: #ffffff;
+    --footer-border-color: #ffffff;
+    --button-hover-color: #3fd851;
+    --header-hover-color: #f72c2c;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: var(--main-color);
+}
+
+/* Container for sidebar and main content */
+
+.card{
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0px;
+    align-items: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    transition: margin-left 0.3s ease;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #ffffff; /* White background for the sidebar */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    position: fixed; /* Ensures the sidebar is on top */
+    height: 100%; /* Ensures the sidebar takes the full height */
+    z-index: 1000;
+    border-right: 30px rgb(50, 49, 49);
+}
+
+/* Sidebar visibility classes */
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar.visible {
+    transform: translateX(0);
+}
+
+/* Sidebar item styling */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #333; /* Default color */
+    border: 1px solid transparent; /* Initial border */
+    margin-right: 5px; /* Adjust margin-right as needed */
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+}
+
+.sidebar-item:hover {
+    background-color: #f0f0f0; /* Hover color */
+    border: 1px solid #000000; /* Add a 1px black border on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.sidebar-item.active {
+    background-color: #007bff; /* Active color */
+    color: #ffffff; /* Active text color */
+    border: 1px solid #000000; /* Add a 1px black border to the active item */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the active item */
+}
+
+/* Main content styling */
+.content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.s ease;
+    box-sizing: border-box;
+}
+
+/* When sidebar is visible */
+.sidebar.visible + .content {
+    margin-left: 250px; /* Adjust offset for sidebar width */
+    width: calc(100% - 200px); /* Reduce the width by the sidebar width */
+}
+
+/* When sidebar is hidden */
+.sidebar.hidden + .content {
+    margin-left: 0;
+    width: 200%; /* Full width when the sidebar is hidden */
+}
+
+/* Button to toggle the sidebar */
+.menu-toggle-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.95rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    z-index: 1001;
+}
+
+.menu-toggle-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Table section styling */
+.table-section {
+    width: 100%;
+    overflow-x: auto;
+    height: auto;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: var(--table-row-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+/* Table headers and cells */
+th, td {
+    padding: 0.85rem;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f0f0f0; /* Gray background color */
+    font-weight: bold;
+    color: #333; /* Gray color for the text */
+   /* text-transform: lowercase;*/
+    letter-spacing: 0.09rem;
+    font-size: 16px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+td img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Button inside table cells */
+td button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+td button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Larger select element */
+td select {
+    /* font-size: 1rem; */
+    /* padding: 0.85rem 1rem; */
+    /* border-radius: 4px;
+    border: 1px solid var(--border-color); */
+    padding: 5px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 868px) {
+    .sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .menu-toggle-btn {
+        font-size: 1.9rem;
+    }
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-background);
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--footer-border-color);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 150px;
+    transition: border-color 0.3s;
+}
+
+footer input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
